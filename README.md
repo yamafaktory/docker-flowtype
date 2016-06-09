@@ -2,6 +2,12 @@
 
 > A [Docker](https://www.docker.com/) image for [Flow](https://flowtype.org/) based on [ocaml/opam:debian](https://github.com/ocaml/opam-dockerfiles).
 
+## Usage
+
+```bash
+docker pull yamafaktory/docker-flowtype
+```
+
 ## License
 
 Released under the [MIT license](https://opensource.org/licenses/MIT) by Davy Duperron.
