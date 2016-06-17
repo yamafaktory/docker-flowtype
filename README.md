@@ -23,18 +23,34 @@ Please note that this option will take a longer time to be executed.
 ```bash
 git clone https://github.com/yamafaktory/docker-flowtype.git
 cd docker-flowtype
-docker build -t docker-flowtype .
+docker build -t yamafaktory/docker-flowtype .
 ```
 
 ## Running the Docker image as a container
 
-Run the following command in order to execute the **flow** static type checker in your project:
+In order to execute the **flow** static type checker in your project, you need to mount the host directory where your project is located (e.g. `/path/to/your/project`) as a data volume in the container (`:/check` - this name is set in the Dockerfile so please do not modify it!) by running the following command:
 
+```bash
+docker run --rm -it -v /path/to/your/project:/check yamafaktory/docker-flowtype
 ```
-docker run -it yamafaktory/docker-flowtype flow
+
+To get a list of the commands and options available via the [CLI tool](https://flowtype.org/docs/cli.html), run:
+
+```bash
+docker run --rm -it yamafaktory/docker-flowtype flow --help
+```
+
+For example, using the **check** command (full Flow check that prints the results):
+
+```bash
+docker run --rm -it -v /path/to/your/project:/check docker-flowtype flow check
 ```
 
 Please refer to the [flow documentation](https://flowtype.org/docs/getting-started.html) for further guidance.
+
+## Flow version
+
+**v0.27.0**
 
 ## License
 
