@@ -1,4 +1,4 @@
-# docker-flowtype
+# docker-flowtype [![Build Status](https://travis-ci.org/yamafaktory/docker-flowtype.svg?branch=master)](https://travis-ci.org/yamafaktory/docker-flowtype)
 
 > A [Docker](https://www.docker.com/) image for [Flow](https://flowtype.org/) based on [ocaml/opam:debian-8_ocaml-4.03.0](https://github.com/ocaml/opam-dockerfiles).
 
@@ -50,12 +50,12 @@ Please refer to the [flow documentation](https://flowtype.org/docs/getting-start
 
 ## Flow version
 
-The current working version is **v0.26.0**, which is set by default in the Docker image.
+The current working version is **v0.27.0**, which is set by default in the Docker image.
 
 You can easily choose any [former verion](https://github.com/facebook/flow/tags) when building the Docker image locally:
 
 ```bash
-docker build --build-arg BUILD_FLOW_VERSION=0.25.0 -t yamafaktory/docker-flowtype .
+docker build --build-arg BUILD_FLOW_VERSION=0.26.0 -t yamafaktory/docker-flowtype .
 ```
 
 ## License
