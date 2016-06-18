@@ -55,7 +55,7 @@ The current working version is **v0.26.0**, which is set by default in the Docke
 You can easily choose any [former verion](https://github.com/facebook/flow/tags) when building the Docker image locally:
 
 ```bash
-docker build -t --build-arg BUILD_FLOW_VERSION=0.25.0 yamafaktory/docker-flowtype .
+docker build --build-arg BUILD_FLOW_VERSION=0.25.0 -t yamafaktory/docker-flowtype .
 ```
 
 ## License
