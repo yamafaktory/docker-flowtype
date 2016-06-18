@@ -52,7 +52,7 @@ Please refer to the [flow documentation](https://flowtype.org/docs/getting-start
 
 The current working version is **v0.27.0**, which is set by default in the Docker image.
 
-You can easily choose any [former verion](https://github.com/facebook/flow/tags) when building the Docker image locally:
+You can easily choose any [former version](https://github.com/facebook/flow/tags) when building the Docker image locally:
 
 ```bash
 docker build --build-arg BUILD_FLOW_VERSION=0.26.0 -t yamafaktory/docker-flowtype .
