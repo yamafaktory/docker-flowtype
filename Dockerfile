@@ -2,13 +2,16 @@
 # Flowtype Dockerfile
 #
 
-FROM ocaml/opam:debian
+FROM ocaml/opam:debian-8_ocaml-4.03.0
 
 MAINTAINER Davy Duperron <yamafaktory@gmail.com>
 
+# Set default Flow version.
+ARG BUILD_FLOW_VERSION=0.26.0
+
 # Set environment variables.
-ENV DEBIAN_FRONTEND noninteractive
-ENV FLOW_VERSION=0.27.0
+ENV DEBIAN_FRONTEND=noninteractive
+ENV FLOW_VERSION=${BUILD_FLOW_VERSION}
 
 # Switch to root user.
 USER root
@@ -22,7 +25,7 @@ RUN apt-get update \
 USER opam
 
 # Install flowtype.
-RUN opam depext --install flowtype
+RUN opam depext --install flowtype.${BUILD_FLOW_VERSION}
 
 # Create a volume where the data to be checked will be mounted.
 VOLUME /check
